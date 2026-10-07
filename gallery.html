@@ -1,0 +1,1170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Hotel</title>
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Google Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="style.css" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css" integrity="sha512-QeR2VH+lsBE5LSAe1Q5EnTBbe7XTBubt8dG93Y7gidSgdMCr8nVqKcfKAMyN96SV8KDbZVTDXChatu5G2KQGzg==" crossorigin="anonymous" referrerpolicy="no-referrer">
+
+
+
+</head>
+
+<body class="bg-[#F7F3EC]">
+
+
+  <!-- =====================================================
+       HERO SECTION
+  ====================================================== -->
+
+<section class="relative h-[55vh] min-h-[420px] overflow-hidden">
+     <!-- ===================================================
+         NAVBAR
+    ==================================================== -->
+
+   <header class="relative z-30 pt-5">
+
+  <!-- =================================================
+       DESKTOP / MAIN NAVBAR
+  ================================================== -->
+
+  <nav
+    class="
+      mx-auto
+      flex
+      h-[78px]
+      max-w-7xl
+      items-center
+      justify-between
+      border-b
+      border-white/15
+      px-5
+      sm:px-8
+      lg:px-10
+    "
+  >
+
+    <!-- ===============================
+         LOGO
+    ================================ -->
+
+    <a
+      href="index.html"
+      class="
+        flex
+        flex-col
+        items-center
+        justify-center
+        text-white
+        leading-none
+      "
+    >
+
+      <span
+        class="
+          heading
+          text-2xl
+          tracking-[0.12em]
+        "
+      >
+        LOGO
+      </span>
+
+      <span
+        class="
+          mt-1
+          text-[8px]
+          tracking-[0.45em]
+          text-white/70
+        "
+      >
+        HOTEL
+      </span>
+
+    </a>
+
+
+    <!-- ===============================
+         DESKTOP MENU
+    ================================ -->
+
+    <div
+      class="
+        hidden
+        items-center
+        gap-8
+        lg:flex
+        xl:gap-10
+      "
+    >
+
+      <!-- Home -->
+
+      <a
+        href="index.html"
+        data-page="index.html"
+        class="
+          desktop-link
+          text-sm
+          text-white/80
+          transition
+          hover:text-[#C58A53]
+        "
+      >
+        Home
+      </a>
+
+
+      <!-- Rooms -->
+
+      <a
+        href="rooms.html"
+        data-page="rooms.html"
+        class="
+          desktop-link
+          text-sm
+          text-white/80
+          transition
+          hover:text-[#C58A53]
+        "
+      >
+        Rooms & Amenities
+      </a>
+
+
+      
+
+
+      <!-- Gallery -->
+
+      <a
+        href="gallery.html"
+        data-page="gallery.html"
+        class="
+          desktop-link
+          text-sm
+          text-white/80
+          transition
+          hover:text-[#C58A53]
+        "
+      >
+        Gallery
+      </a>
+
+
+      
+
+
+      <!-- Contact -->
+
+      <a
+        href="contact.html"
+        data-page="contact.html"
+        class="
+          desktop-link
+          text-sm
+          text-white/80
+          transition
+          hover:text-[#C58A53]
+        "
+      >
+        Contact
+      </a>
+
+    </div>
+
+
+    <!-- ===============================
+         RIGHT ACTIONS
+    ================================ -->
+
+    <div class="flex items-center gap-3 sm:gap-5">
+
+      <!-- Sign In -->
+
+      <button
+        type="button"
+        class="
+          hidden
+          items-center
+          gap-2
+          text-sm
+          text-white
+          transition
+          hover:text-[#C58A53]
+          sm:flex
+        "
+      >
+
+        <svg
+          class="h-4 w-4"
+          fill="none"
+          stroke="currentColor"
+          viewBox="0 0 24 24"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="1.7"
+            d="M15.75 6a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0ZM4.5 20.25a8.25 8.25 0 0 1 15 0"
+          />
+        </svg>
+
+        Sign In
+
+      </button>
+
+
+      <!-- Book Now -->
+
+      <a
+        href="booking.html"
+        class="
+          hidden
+          border
+          border-[#C58A53]
+          bg-[#C58A53]
+          px-6
+          py-3
+          text-sm
+          font-medium
+          text-white
+          transition
+          hover:bg-transparent
+          hover:text-[#C58A53]
+          sm:block
+        "
+      >
+        Book Now
+      </a>
+
+
+      <!-- Mobile Menu Button -->
+
+      <button
+        id="menuButton"
+        type="button"
+        class="
+          text-white
+          transition
+          hover:text-[#C58A53]
+          lg:hidden
+        "
+        aria-label="Open menu"
+        aria-expanded="false"
+      >
+
+        <svg
+          class="h-7 w-7"
+          fill="none"
+          stroke="currentColor"
+          viewBox="0 0 24 24"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="1.5"
+            d="M4 6h16M4 12h16M4 18h16"
+          />
+        </svg>
+
+      </button>
+
+    </div>
+
+  </nav>
+
+
+  <!-- =================================================
+       MOBILE MENU OVERLAY
+  ================================================== -->
+
+  <div
+    id="menuOverlay"
+    class="
+      fixed
+      inset-0
+      z-40
+      hidden
+      bg-black/50
+      backdrop-blur-[2px]
+    "
+  ></div>
+
+
+  <!-- =================================================
+       MOBILE OFF-CANVAS MENU
+  ================================================== -->
+
+  <div
+    id="mobileMenu"
+    class="
+      fixed
+      right-0
+      top-0
+      z-50
+      h-screen
+      w-[85%]
+      max-w-sm
+      translate-x-full
+      bg-[#171512]
+      shadow-[-20px_0_50px_rgba(0,0,0,0.3)]
+      transition-transform
+      duration-500
+      ease-in-out
+    "
+  >
+
+    <!-- ===============================
+         MOBILE MENU HEADER
+    ================================ -->
+
+    <div
+      class="
+        flex
+        h-[78px]
+        items-center
+        justify-between
+        border-b
+        border-white/10
+        px-6
+      "
+    >
+
+      <!-- Logo -->
+
+      <a
+        href="index.html"
+        class="
+          flex
+          flex-col
+          leading-none
+          text-white
+        "
+      >
+
+        <span
+          class="
+            heading
+            text-xl
+            tracking-[0.12em]
+          "
+        >
+          LOGO
+        </span>
+
+        <span
+          class="
+            mt-1
+            text-[7px]
+            tracking-[0.45em]
+            text-white/60
+          "
+        >
+          HOTEL
+        </span>
+
+      </a>
+
+
+      <!-- Close Button -->
+
+      <button
+        id="closeMenu"
+        type="button"
+        class="
+          text-white/80
+          transition
+          hover:text-[#C58A53]
+        "
+        aria-label="Close menu"
+      >
+
+        <svg
+          class="h-7 w-7"
+          fill="none"
+          stroke="currentColor"
+          viewBox="0 0 24 24"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="1.5"
+            d="M6 6l12 12M18 6L6 18"
+          />
+        </svg>
+
+      </button>
+
+    </div>
+
+
+    <!-- ===============================
+         MOBILE MENU LINKS
+    ================================ -->
+
+    <nav class="flex flex-col px-6 py-8">
+
+      <!-- Home -->
+
+      <a
+        href="index.html"
+        data-page="index.html"
+        class="
+          mobile-link
+          border-b
+          border-white/10
+          py-4
+          text-base
+          text-white/75
+          transition
+          hover:text-[#C58A53]
+        "
+      >
+        Home
+      </a>
+
+
+      <!-- Rooms -->
+
+      <a
+        href="rooms.html"
+        data-page="rooms.html"
+        class="
+          mobile-link
+          border-b
+          border-white/10
+          py-4
+          text-base
+          text-white/75
+          transition
+          hover:text-[#C58A53]
+        "
+      >
+        Rooms & Amenities
+      </a>
+
+
+      
+
+      <!-- Gallery -->
+
+      <a
+        href="gallery.html"
+        data-page="gallery.html"
+        class="
+          mobile-link
+          border-b
+          border-white/10
+          py-4
+          text-base
+          text-white/75
+          transition
+          hover:text-[#C58A53]
+        "
+      >
+        Gallery
+      </a>
+
+
+    
+
+      <!-- Contact -->
+
+      <a
+        href="contact.html"
+        data-page="contact.html"
+        class="
+          mobile-link
+          border-b
+          border-white/10
+          py-4
+          text-base
+          text-white/75
+          transition
+          hover:text-[#C58A53]
+        "
+      >
+        Contact
+      </a>
+
+
+      <!-- Book Now -->
+
+      <a
+        href="booking.html"
+        class="
+          mobile-link
+          mt-8
+          block
+          border
+          border-[#C58A53]
+          bg-[#C58A53]
+          py-3.5
+          text-center
+          text-sm
+          font-medium
+          text-white
+          transition
+          hover:bg-transparent
+          hover:text-[#C58A53]
+        "
+      >
+        Book Now
+      </a>
+
+    </nav>
+
+  </div>
+
+</header>
+
+  <!-- Background Image -->
+  <div class="absolute inset-0">
+    <img
+      src="https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=2000&q=85"
+      alt="Logo Hotel"
+      class="h-full w-full object-cover"
+    />
+    <div class="absolute inset-0 bg-black/35"></div>
+  </div>
+
+  <!-- Content -->
+  <div class="relative z-10 flex h-full items-center justify-center px-5 text-center">
+    <div class="max-w-3xl text-white">
+      <p class="mb-5 text-[10px] font-medium uppercase tracking-[0.4em] text-white/80">
+        Moments Worth Remembering
+      </p>
+
+      <h1 class="heading text-4xl leading-tight  lg:text-6xl">
+        Our Gallery
+      </h1>
+
+      <p class="mx-auto mt-6 max-w-xl text-sm leading-7 text-white/85 sm:text-base">
+       Explore the spaces, details, and quiet moments that make a stay at logo feel truly special.
+      </p>
+    </div>
+  </div>
+</section>
+
+
+<section class="overflow-hidden bg-[#f8f7f2] py-20 sm:py-24 lg:py-28">
+
+  <!-- Section Header -->
+  <div class="mx-auto mb-12 max-w-2xl px-5 text-center sm:px-8 lg:mb-16">
+    
+    <p class="mb-4 text-[10px] font-medium uppercase tracking-[0.35em] text-[#7A8065]">
+      A Glimpse of logo
+    </p>
+
+    <h2 class="heading text-3xl leading-tight text-[#22201D] sm:text-4xl lg:text-5xl">
+      Moments Worth Remembering
+    </h2>
+
+    <p class="mt-5 text-sm leading-7 text-[#6f6b64] sm:text-base">
+      Explore the spaces, details, and quiet moments that make a stay
+      at logo feel truly special.
+    </p>
+
+  </div>
+
+
+  <!-- Slider -->
+  <div class="relative w-full overflow-hidden">
+
+    <div
+      id="gallerySlider"
+      class="flex w-max gap-4 will-change-transform sm:gap-5 lg:gap-6"
+    >
+
+      <!-- ORIGINAL SLIDES -->
+
+      <!-- Image 1 -->
+      <div class="gallery-slide">
+        <img
+          src="https://images.unsplash.com/photo-1611892440504-42a792e24d32?auto=format&fit=crop&w=1200&q=85"
+          alt="logo Hotel exterior"
+          class="h-[300px] w-[260px] object-cover sm:h-[380px] sm:w-[330px] lg:h-[480px] lg:w-[420px]"
+        />
+      </div>
+
+      <!-- Image 2 -->
+      <div class="gallery-slide">
+        <img
+          src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=1200&q=85"
+          alt="logo Hotel room"
+          class="h-[300px] w-[260px] object-cover sm:h-[380px] sm:w-[330px] lg:h-[480px] lg:w-[420px]"
+        />
+      </div>
+
+      <!-- Image 3 -->
+      <div class="gallery-slide">
+        <img
+          src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=1200&q=85"
+          alt="Hotel lounge"
+          class="h-[300px] w-[260px] object-cover sm:h-[380px] sm:w-[330px] lg:h-[480px] lg:w-[420px]"
+        />
+      </div>
+
+      <!-- Image 4 -->
+      <div class="gallery-slide">
+        <img
+          src="https://images.unsplash.com/photo-1590490360182-c33d57733427?auto=format&fit=crop&w=1200&q=85"
+          alt="Hotel dining area"
+          class="h-[300px] w-[260px] object-cover sm:h-[380px] sm:w-[330px] lg:h-[480px] lg:w-[420px]"
+        />
+      </div>
+
+      <!-- Image 5 -->
+      <div class="gallery-slide">
+        <img
+          src="https://images.unsplash.com/photo-1566665797739-1674de7a421a?auto=format&fit=crop&w=1200&q=85"
+          alt="Hotel swimming pool"
+          class="h-[300px] w-[260px] object-cover sm:h-[380px] sm:w-[330px] lg:h-[480px] lg:w-[420px]"
+        />
+      </div>
+
+      <!-- Image 6 -->
+      <div class="gallery-slide">
+        <img
+          src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1200&q=85"
+          alt="Hotel details"
+          class="h-[300px] w-[260px] object-cover sm:h-[380px] sm:w-[330px] lg:h-[480px] lg:w-[420px]"
+        />
+      </div>
+
+
+      <!-- DUPLICATE SLIDES FOR INFINITE LOOP -->
+
+      <!-- Image 1 -->
+      <div class="gallery-slide">
+        <img
+          src="https://images.unsplash.com/photo-1611892440504-42a792e24d32?auto=format&fit=crop&w=1200&q=85"
+          alt="logo Hotel exterior"
+          class="h-[300px] w-[260px] object-cover sm:h-[380px] sm:w-[330px] lg:h-[480px] lg:w-[420px]"
+        />
+      </div>
+
+      <!-- Image 2 -->
+      <div class="gallery-slide">
+        <img
+          src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=1200&q=85"
+          alt="logo Hotel room"
+          class="h-[300px] w-[260px] object-cover sm:h-[380px] sm:w-[330px] lg:h-[480px] lg:w-[420px]"
+        />
+      </div>
+
+      <!-- Image 3 -->
+      <div class="gallery-slide">
+        <img
+          src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=1200&q=85"
+          alt="Hotel lounge"
+          class="h-[300px] w-[260px] object-cover sm:h-[380px] sm:w-[330px] lg:h-[480px] lg:w-[420px]"
+        />
+      </div>
+
+      <!-- Image 4 -->
+      <div class="gallery-slide">
+        <img
+          src="https://images.unsplash.com/photo-1590490360182-c33d57733427?auto=format&fit=crop&w=1200&q=85"
+          alt="Hotel dining area"
+          class="h-[300px] w-[260px] object-cover sm:h-[380px] sm:w-[330px] lg:h-[480px] lg:w-[420px]"
+        />
+      </div>
+
+      <!-- Image 5 -->
+      <div class="gallery-slide">
+        <img
+          src="https://images.unsplash.com/photo-1566665797739-1674de7a421a?auto=format&fit=crop&w=1200&q=85"
+          alt="Hotel swimming pool"
+          class="h-[300px] w-[260px] object-cover sm:h-[380px] sm:w-[330px] lg:h-[480px] lg:w-[420px]"
+        />
+      </div>
+
+      <!-- Image 6 -->
+      <div class="gallery-slide">
+        <img
+          src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1200&q=85"
+          alt="Hotel details"
+          class="h-[300px] w-[260px] object-cover sm:h-[380px] sm:w-[330px] lg:h-[480px] lg:w-[420px]"
+        />
+      </div>
+
+    </div>
+
+  </div>
+
+
+  <!-- Bottom CTA -->
+  <div class="mt-12 text-center lg:mt-16">
+    <a
+        href="contact.html"
+        class="
+          inline-flex
+          items-center
+          gap-3
+          text-sm px-8 py-3.5
+          font-medium
+          uppercase
+          tracking-[0.25em]
+          text-white bg-[#C58A53] hover:bg-transparent border border-[#C58A53]
+          transition
+          hover:text-[#c58a53]
+        "
+      >
+        Plan Your Stay
+
+        <span
+          class="
+            text-base
+            transition-transform
+            duration-300
+            group-hover:translate-x-1
+          "
+        >
+          →
+        </span>
+      </a>
+  </div>
+
+</section>
+
+
+<style>
+  .gallery-slide {
+    flex-shrink: 0;
+    overflow: hidden;
+    
+  }
+
+  .gallery-slide img {
+    display: block;
+    transition: transform 0.6s ease;
+  }
+
+  .gallery-slide:hover img {
+    transform: scale(1.04);
+  }
+</style>
+
+
+
+
+
+<!-- =========================================================
+     FOOTER
+========================================================= -->
+
+<footer class="bg-[#22201D] text-white">
+
+  <!-- =======================================================
+       MAIN FOOTER
+  ======================================================== -->
+
+  <div
+    class="
+      mx-auto
+      max-w-7xl
+      px-5
+      py-16
+      sm:px-8
+      lg:px-10
+      lg:py-20
+    "
+  >
+
+    <div
+      class="
+        grid
+        grid-cols-1
+        gap-12
+        sm:grid-cols-2
+        lg:grid-cols-12
+        lg:gap-10
+      "
+    >
+
+      <!-- ===================================================
+           BRAND
+      ==================================================== -->
+
+      <div class="lg:col-span-5">
+
+        <!-- Logo -->
+
+        <a
+          href="/"
+          class="
+            inline-block
+            text-center
+            leading-none
+          "
+        >
+
+          <span
+            class="
+              block
+              heading
+              text-2xl
+              tracking-[0.15em]
+            "
+          >
+            LOGO
+          </span>
+
+          <span
+            class="
+              mt-1
+              block
+              text-[8px]
+              tracking-[0.4em]
+              text-white/50
+            "
+          >
+            HOTEL
+          </span>
+
+        </a>
+
+
+        <p
+          class="
+            mt-6
+            max-w-sm
+            text-sm
+            leading-7
+            text-white/55
+          "
+        >
+          A quiet retreat shaped by thoughtful design,
+          warm hospitality, and the art of slowing down.
+        </p>
+
+
+        <!-- Social Links -->
+
+        <div class="mt-7 flex items-center gap-3">
+
+          <!-- Social Links -->
+
+<div class="mt-7 flex items-center gap-3">
+
+  <!-- Instagram -->
+  <a
+    href="#"
+    aria-label="Instagram"
+    class="
+      flex
+      h-9
+      w-9
+      items-center
+      justify-center
+      border
+      border-white/15
+      text-white/70
+      transition
+      hover:border-[#7A8065]
+      hover:bg-[#7A8065]
+      hover:text-white
+    "
+  >
+    <i class="fa-brands fa-instagram text-sm"></i>
+  </a>
+
+
+  <!-- Facebook -->
+  <a
+    href="#"
+    aria-label="Facebook"
+    class="
+      flex
+      h-9
+      w-9
+      items-center
+      justify-center
+      border
+      border-white/15
+      text-white/70
+      transition
+      hover:border-[#7A8065]
+      hover:bg-[#7A8065]
+      hover:text-white
+    "
+  >
+    <i class="fa-brands fa-facebook-f text-sm"></i>
+  </a>
+
+
+  <!-- Pinterest -->
+  <a
+    href="#"
+    aria-label="Pinterest"
+    class="
+      flex
+      h-9
+      w-9
+      items-center
+      justify-center
+      border
+      border-white/15
+      text-white/70
+      transition
+      hover:border-[#7A8065]
+      hover:bg-[#7A8065]
+      hover:text-white
+    "
+  >
+    <i class="fa-brands fa-pinterest-p text-sm"></i>
+  </a>
+
+</div>
+
+        </div>
+
+      </div>
+
+
+
+      <!-- ===================================================
+           EXPLORE
+      ==================================================== -->
+
+      <div class="lg:col-span-2">
+
+        <h3
+          class="
+            text-[10px]
+            font-medium
+            uppercase
+            tracking-[0.3em]
+            text-[#E4E8DA]
+          "
+        >
+          Explore
+        </h3>
+
+
+        <ul class="mt-6 space-y-4">
+
+          <li>
+            <a
+              href="/"
+              class="text-sm text-white/55 transition hover:text-white"
+            >
+              Home
+            </a>
+          </li>
+
+          <li>
+            <a
+              href="/rooms"
+              class="text-sm text-white/55 transition hover:text-white"
+            >
+              Rooms & Amenities
+            </a>
+          </li>
+
+          
+
+        </ul>
+
+      </div>
+
+
+
+      <!-- ===================================================
+           INFORMATION
+      ==================================================== -->
+
+      <div class="lg:col-span-2">
+
+        <h3
+          class="
+            text-[10px]
+            font-medium
+            uppercase
+            tracking-[0.3em]
+            text-[#E4E8DA]
+          "
+        >
+          Information
+        </h3>
+
+
+        <ul class="mt-6 space-y-4">
+
+          <li>
+            <a
+              href="/contact"
+              class="text-sm text-white/55 transition hover:text-white"
+            >
+              Contact
+            </a>
+          </li>
+
+          <li>
+            <a
+              href="/privacy"
+              class="text-sm text-white/55 transition hover:text-white"
+            >
+              Privacy Policy
+            </a>
+          </li>
+
+          <li>
+            <a
+              href="/terms"
+              class="text-sm text-white/55 transition hover:text-white"
+            >
+              Terms & Conditions
+            </a>
+          </li>
+
+          <li>
+            <a
+              href="/faq"
+              class="text-sm text-white/55 transition hover:text-white"
+            >
+              FAQs
+            </a>
+          </li>
+
+        </ul>
+
+      </div>
+
+
+
+      <!-- ===================================================
+           CONTACT
+      ==================================================== -->
+
+      <div class="lg:col-span-3">
+
+        <h3
+          class="
+            text-[10px]
+            font-medium
+            uppercase
+            tracking-[0.3em]
+            text-[#E4E8DA]
+          "
+        >
+          Find Us
+        </h3>
+
+
+        <div class="mt-6 space-y-4">
+
+          <p class="text-sm leading-6 text-white/55">
+            24 Shyamla Hills, Bhopal, Madhya Pradesh 462002, India
+          </p>
+
+
+          <a
+            href="tel:+911234567890"
+            class="block text-sm text-white/55 transition hover:text-white"
+          >
+            +91 12345 67890
+          </a>
+
+
+          <a
+            href="mailto:hello@logohotel.com"
+            class="block text-sm text-white/55 transition hover:text-white"
+          >
+            hello@logohotel.com
+          </a>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+
+
+  <!-- =======================================================
+       BOTTOM BAR
+  ======================================================== -->
+
+  <div class="border-t border-white/10">
+
+    <div
+      class="
+        mx-auto
+        flex
+        max-w-7xl
+        flex-col
+        gap-3
+        px-5
+        py-6
+        sm:px-8
+        md:flex-row
+        md:items-center
+        md:justify-between
+        lg:px-10
+      "
+    >
+
+      <p class="text-xs text-white/35">
+        © 2026 LOGO Hotel. All rights reserved.
+      </p>
+
+
+      <p class="text-xs text-white/35">
+        Crafted By Ahaan Software.
+      </p>
+
+    </div>
+
+  </div>
+
+</footer>
+<!-- Floating WhatsApp Button -->
+
+<a
+  href="https://wa.me/919876543210?text=Hello%20Aurelia%20Hotel,%20I%20would%20like%20to%20know%20more%20about%20your%20rooms%20and%20availability."
+  target="_blank"
+  rel="noopener noreferrer"
+  aria-label="Chat with us on WhatsApp"
+  class="
+    fixed
+    bottom-6
+    right-6
+    z-[100]
+    flex
+    h-14
+    w-14
+    items-center
+    justify-center
+    rounded-full
+    bg-[#25D366]
+    text-white
+    shadow-[0_8px_25px_rgba(0,0,0,0.18)]
+    transition-all
+    duration-300
+    hover:scale-110
+    hover:shadow-[0_12px_30px_rgba(0,0,0,0.25)]
+    sm:bottom-7
+    sm:right-7
+  "
+>
+  <i class="fa-brands fa-whatsapp text-[28px]"></i>
+</a>
+<script src="script.js"></script>
+<script src="loop.js"></script>
+</body>
